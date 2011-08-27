@@ -186,10 +186,13 @@
     <Content Include="Views\Home\AllSpeakers.cshtml" />
     <Content Include="Views\Home\AllTags.cshtml" />
     <Content Include="Views\Home\Session.cshtml" />
+    <Content Include="Views\Home\Index.Mobile.cshtml" />
     <None Include="Views\Home\Session.Mobile.cshtml.hidden" />
     <Content Include="Views\Home\SessionsTable.cshtml" />
     <Content Include="Views\Home\_SpeakersLinks.cshtml" />
     <Content Include="Views\Home\_TagsLinks.cshtml" />
+    <Content Include="Views\Shared\_Layout.Mobile.cshtml" />
+    <Content Include="Views\Shared\_Layout.iphone.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

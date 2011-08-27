@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.WebPages;
 
 namespace ConferenceSessionBrowser
 {
@@ -32,6 +33,10 @@ namespace ConferenceSessionBrowser
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+
+            DisplayModes.Modes.Insert(0, new DefaultDisplayMode("iphone") {
+                ContextCondition = context => context.Request.UserAgent.Contains("iPhone")
+            });
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
