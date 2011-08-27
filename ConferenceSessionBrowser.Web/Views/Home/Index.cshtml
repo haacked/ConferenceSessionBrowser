@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section featured {
+<section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@ViewBag.Title.</h1>
+            <h2>@ViewBag.Message</h2>
+        </hgroup>
+        <p>
+            To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+            lerat, malesuada euismod dui. Duis iaculis risus id felis volutpat elementum. Fusce blandit iaculis 
+            quam a cursus. Cras varius tincidunt cursus. <span class="highlight">Morbi justo eros</span>, 
+            <span class="highlight">adipiscing ac placerat sed</span>, posuere et mi. Suspendisse vulputate 
+            viverra aliquet.
+        </p>
+    </div>
+</section>
+}
+
+
+<h3>Might we suggest...</h3>
+
+<ol class="round">
+    <li class="one">
+        <h5>Configure ASP.NET Membership</h5>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus tincidunt justo nec tempor. 
+        Aliquam erat volutpat. Fusece facilisis ullamcorper consequat. Vestibulum non sapien lectus. Nam 
+        mi augue, posuere at tempus vel, dignissim vitae nulla.
+    </li>
+    <li class="two">
+        <h5>Add NuGet packages and jump start your coding</h5>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus tincidunt justo nec tempor. 
+        Aliquam erat volutpat. Fusce facilisis ullamcorper consequat. Vestibulum non sapien lectus. Nam 
+        mi augue, posuere at tempus vel, dignissim vitae nulla.
+    </li>
+    <li class="three">
+        <h5>Setup deployment to your web server</h5>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus tincidunt justo nec tempor. 
+        Aliquam erat volutpat. Fusce facilisis ullamcorper consequat. Vestibulum non sapien lectus. Nam 
+        mi augue, posuere at tempus vel, dignissim vitae nulla.
+    </li>
+</ol>
+
+<section class="features">
+    <section class="feature">
+        <img src="@Url.Content("~/images/aspNetHome.png")" alt="ASP.NET" />
+        <h3>Home of ASP.NET</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus tincidunt justo nec tempor. 
+            Aliquam erat volutpat. Fusce facilisis ullamcorper consequat. Vestibulum non sapien lectus.
+            Cras varius tincidunt cursus. Morbi justo eros, adipiscing ac placerat sed, posuere 
+            et mi. Suspendisse vulputate viverra aliquet. 
+        </p>
+    </section>
+    <section class="feature">
+        <img src="@Url.Content("~/images/NuGetGallery.png")" alt="NuGet" />
+        <h3>NuGet Gallery</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus tincidunt justo nec tempor. 
+            Aliquam erat volutpat. Fusce facilisis ullamcorper consequat. Vestibulum non sapien lectus.
+            Duis non enim a nibh consequat mollis ac tempor lorem. Phasellus elit leo, semper eu luctus et, 
+            suscipit at lacus.
+        </p>
+    </section>
+    <section class="feature">
+        <img src="@Url.Content("~/images/findHosting.png")" alt="Hosting" />
+        <h3>Find Web Hosting</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus tincidunt justo nec tempor. 
+            Aliquam erat volutpat. Fusce facilisis ullamcorper consequat. Vestibulum non sapien lectus.
+        </p>
+    </section>
+</section>
