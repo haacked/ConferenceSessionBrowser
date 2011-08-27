@@ -1,11 +1,10 @@
 /*
- * jQuery UI CSS Framework 1.8.15
+ * jQuery UI Selectable 1.8.15
  *
  * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * http://jquery.org/license
  *
- * http://docs.jquery.com/UI/Theming
+ * http://docs.jquery.com/UI/Selectable#theming
  */
-@import "jquery.ui.base.css";
-@import "jquery.ui.theme.css";
+.ui-selectable-helper{position:absolute;z-index:100;border:1px dotted black;}
