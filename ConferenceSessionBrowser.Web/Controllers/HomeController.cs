@@ -1,32 +1,61 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
-namespace ConferenceSessionBrowser.Web.Controllers
+namespace ConferenceSessionBrowser
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            ViewBag.Message = "Modify this template to kick-start your ASP.NET MVC application.";
-
+            ViewBag.NumSessions = Sessions.All.Count;
             return View();
         }
 
-        public ActionResult About()
+        public ViewResult AllSpeakers()
         {
-            ViewBag.Message = "Your quintessential app description page.";
-
-            return View();
+            var allSpeakers = Sessions.All.SelectMany(x => x.Speakers).Distinct().OrderBy(x => x);
+            return View(allSpeakers);
         }
 
-        public ActionResult Contact()
+        public ViewResult AllTags()
         {
-            ViewBag.Message = "Your quintessential contact page.";
+            var allTags = Sessions.All.SelectMany(x => x.Tags).Distinct().OrderBy(x => x);
+            return View(allTags);
+        }
 
-            return View();
+        public ViewResult AllDates()
+        {
+            var allDates = Sessions.All.Select(x => x.StartDate).Distinct().OrderBy(x => x);
+            return View(allDates);
+        }
+
+        public ViewResult SessionsBySpeaker(string speaker)
+        {
+            ViewBag.Title = "Sessions by " + speaker;
+            var sessions = Sessions.All.Where(session => session.Speakers.Contains(speaker)).OrderBy(x => x.StartDate);
+            return View("SessionsTable", sessions);
+        }
+
+        public ViewResult SessionsByTag(string tag)
+        {
+            ViewBag.Title = "Sessions tagged " + tag;
+            var sessions = Sessions.All.Where(session => session.Tags.Contains(tag)).OrderBy(x => x.Title);
+            return View("SessionsTable", sessions);
+        }
+
+        public ViewResult SessionsByDate(DateTime date)
+        {
+            ViewBag.Title = "Sessions on at " + date.ToString("ddd, MMM dd, h:mm tt");
+            var sessions = Sessions.All.Where(session => session.StartDate == date).OrderBy(x => x.Title);
+            return View("SessionsTable", sessions);
+        }
+
+        [ActionName("Session")]
+        public ViewResult SessionDisplay(string code)
+        {
+            var session = Sessions.All.Single(x => x.Code == code);
+            return View(session);
         }
     }
 }
