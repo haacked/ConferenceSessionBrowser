@@ -3,6 +3,10 @@
 }
 
 <h2>BUILD 2011 - browse @ViewBag.NumSessions sessions</h2>
-<p>
-    This is the <strong>MOBILE</strong> home page.
-</p>
+
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Browse by...</li>
+    <li>@Html.ActionLink("Date", "AllDates")</li>
+    <li>@Html.ActionLink("Speaker", "AllSpeakers")</li>
+    <li>@Html.ActionLink("Tag", "AllTags")</li>
+</ul>

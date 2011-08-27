@@ -3,7 +3,7 @@
     bool isShowingMobileView = ViewContext.DisplayMode.DisplayModeId == "Mobile";
     bool currentViewHasMobileVersion = isShowingMobileView || ViewContext.ViewOverrideExists("Mobile");
 }
-@if (currentViewHasMobileVersion && Request.Browser.IsMobileDevice && Request.HttpMethod == "GET")
+@if (currentViewHasMobileVersion && Request.HttpMethod == "GET")
 {
     <div style="background-color: Black; color: white; padding: 0.5em; text-shadow: none;">
         @if (isShowingMobileView)
