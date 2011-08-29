@@ -1,0 +1,20 @@
+﻿@using jQuery.Mobile.MVC
+@{
+    bool isShowingMobileView = ViewContext.DisplayMode.DisplayModeId == "Mobile";
+    bool currentViewHasMobileVersion = isShowingMobileView || ViewContext.ViewOverrideExists("Mobile");
+}
+@if (currentViewHasMobileVersion && Request.Browser.IsMobileDevice && Request.HttpMethod == "GET")
+{
+    <div style="background-color: Black; color: white; padding: 0.5em; text-shadow: none;">
+        @if (isShowingMobileView)
+        {
+            @: Displaying mobile view
+            @Html.ActionLink("Desktop view", "SwitchView", "ViewSwitcher", new { mobile = false, returnUrl = Request.Url.PathAndQuery }, new { rel = "external" })
+        } 
+        else 
+        {
+            @: Displaying desktop view
+            @Html.ActionLink("Mobile view", "SwitchView", "ViewSwitcher", new { mobile = true, returnUrl = Request.Url.PathAndQuery }, new { rel = "external" })
+        }
+    </div>
+}
