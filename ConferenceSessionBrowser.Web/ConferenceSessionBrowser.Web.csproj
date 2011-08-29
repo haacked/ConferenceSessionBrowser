@@ -212,6 +212,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\SessionsTable.Mobile.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
