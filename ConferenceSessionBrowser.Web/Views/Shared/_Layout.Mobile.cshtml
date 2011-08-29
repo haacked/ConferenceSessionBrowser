@@ -17,17 +17,6 @@
         <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.mobile-1.0b2.min.js")"></script>
     </head> 
 <body> 
-    <script>
-        $(function () {
-            if (Modernizr.applicationcache) {
-                alert('Offline enabled!');
-            }
-            else {
-                alert('No offline for you!');
-            }
-        });
-    </script>
-
     <div data-role="page" data-theme="e">
         @Html.Partial("_ViewSwitcher")
 
