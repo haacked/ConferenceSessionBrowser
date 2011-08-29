@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html> 
-<html> 
+<html manifest="/cache.manifest"> 
     <head> 
         <meta charset="utf-8" />
         <title>@ViewBag.Title</title> 
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="@Url.Content("~/Content/jquery.mobile-1.0b2.min.css")" />
         <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.6.2.min.js")"></script>
+        <script src="/Scripts/modernizr-2.0.6-development-only.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).bind("mobileinit", function() {
                 // As of Beta 2, jQuery Mobile's Ajax navigation does not work in all cases (e.g.,
@@ -16,6 +17,16 @@
         <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.mobile-1.0b2.min.js")"></script>
     </head> 
 <body> 
+    <script>
+        $(function () {
+            if (Modernizr.applicationcache) {
+                alert('Offline enabled!');
+            }
+            else {
+                alert('No offline for you!');
+            }
+        });
+    </script>
 
     <div data-role="page" data-theme="e">
         @Html.Partial("_ViewSwitcher")
