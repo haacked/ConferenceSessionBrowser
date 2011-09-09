@@ -111,7 +111,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Sessions\RawSessionsData.xml" />
     <Content Include="Content\images\ajax-loader.png" />
     <Content Include="Content\images\icon-search-black.png" />
     <Content Include="Content\images\icons-18-black.png" />
@@ -120,6 +119,7 @@
     <Content Include="Content\images\icons-36-white.png" />
     <Content Include="Content\jquery.mobile-1.0b2.css" />
     <Content Include="Content\jquery.mobile-1.0b2.min.css" />
+    <Content Include="App_Data\Sessions\BuildSessionsData.xml" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
