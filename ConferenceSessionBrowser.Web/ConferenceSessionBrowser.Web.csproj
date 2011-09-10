@@ -38,7 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="jQuery.Mobile.MVC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\jQuery.Mobile.MVC.0.0.1\lib\jQuery.Mobile.MVC.dll</HintPath>
+      <HintPath>..\packages\jQuery.Mobile.MVC.0.0.2\lib\jQuery.Mobile.MVC.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -113,9 +113,10 @@
     <Content Include="Content\images\icons-18-white.png" />
     <Content Include="Content\images\icons-36-black.png" />
     <Content Include="Content\images\icons-36-white.png" />
-    <Content Include="Content\jquery.mobile-1.0b2.css" />
-    <Content Include="Content\jquery.mobile-1.0b2.min.css" />
     <Content Include="App_Data\Sessions\BuildSessionsData.xml" />
+    <Content Include="Content\jquery.mobile-1.0b3.css" />
+    <Content Include="Content\jquery.mobile-1.0b3.min.css" />
+    <Content Include="Content\Site.Mobile.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -174,13 +175,13 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\iphone.png" />
-    <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.6.2.js" />
-    <Content Include="Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Scripts\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.3.js" />
+    <Content Include="Scripts\jquery-1.6.3.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.15.js" />
     <Content Include="Scripts\jquery-ui-1.8.15.min.js" />
-    <Content Include="Scripts\jquery.mobile-1.0b2.js" />
-    <Content Include="Scripts\jquery.mobile-1.0b2.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.0b3.js" />
+    <Content Include="Scripts\jquery.mobile-1.0b3.min.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
