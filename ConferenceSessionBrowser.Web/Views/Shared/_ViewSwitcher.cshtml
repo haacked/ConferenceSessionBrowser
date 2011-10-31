@@ -1,12 +1,7 @@
-﻿@using jQuery.Mobile.MVC
-@{
-    bool isShowingMobileView = ViewContext.DisplayMode.DisplayModeId == "Mobile";
-    bool currentViewHasMobileVersion = isShowingMobileView || ViewContext.ViewOverrideExists("Mobile");
-}
-@if (currentViewHasMobileVersion && Request.HttpMethod == "GET")
+﻿@if (Request.Browser.IsMobileDevice && Request.HttpMethod == "GET")
 {
-    <div style="background-color: Black; color: white; padding: 0.5em; text-shadow: none;">
-        @if (isShowingMobileView)
+    <div class="view-switcher ui-bar-a">
+        @if (ViewContext.HttpContext.GetOverriddenBrowser().IsMobileDevice)
         {
             @: Displaying mobile view
             @Html.ActionLink("Desktop view", "SwitchView", "ViewSwitcher", new { mobile = false, returnUrl = Request.Url.PathAndQuery }, new { rel = "external" })

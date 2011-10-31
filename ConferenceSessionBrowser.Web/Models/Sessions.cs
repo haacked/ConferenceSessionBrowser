@@ -15,7 +15,9 @@ namespace ConferenceSessionBrowser
         static Sessions()
         {
             // Parse the XML
-            var xmlFilename = HttpContext.Current.Server.MapPath("~/App_Data/Sessions/BuildSessionsData.xml");
+            string pathFormat = "~/App_Data/Sessions/{0}SessionsData.xml";
+            string path = String.Format(pathFormat, Config.ConferenceId);
+            var xmlFilename = HttpContext.Current.Server.MapPath(path);
             var xml = XDocument.Load(xmlFilename);
             var sessions = from tr in xml.Root.Elements("tr")
                            let cols = tr.Elements().ToArray()
@@ -48,7 +50,8 @@ namespace ConferenceSessionBrowser
         private static DateTime SessionNumberToDate(string sessionNumber)
         {
             var number = int.Parse(sessionNumber.Substring(8));
-            switch (number) {
+            switch (number)
+            {
                 case 1: return new DateTime(2011, 9, 14, 11, 30, 0);
                 case 2: return new DateTime(2011, 9, 14, 14, 0, 0);
                 case 3: return new DateTime(2011, 9, 14, 15, 30, 0);
