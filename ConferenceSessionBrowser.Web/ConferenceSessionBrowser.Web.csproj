@@ -108,8 +108,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Sessions\BuildSessionsData.xml" />
-    <Content Include="App_Data\Sessions\OredevSessionsData.xml" />
+    <Content Include="App_Data\Sessions\SessionsData.xml" />
     <Content Include="Content\images\ajax-loader.png" />
     <Content Include="Content\images\icons-18-black.png" />
     <Content Include="Content\images\icons-18-white.png" />
